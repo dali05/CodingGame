@@ -1,0 +1,131 @@
+--        |-----------------------------------|                      |-----------------------------------|
+--        |     PRODUCT_CATEGORY              |                      |        CUSTOMER                   |
+--        |-----------------------------------|                      |-----------------------------------|
+--        |product_category_id   INTEGER      |<--|                  |customer_id            INTEGER     |<----|
+--        |name                  VARCHAR(50)  |   |                  |firstname             VARCHAR(50)  |     |
+--        |description           VARCHAR(255) |   |                  |lastname              VARCHAR(50)  |     |
+--        |-----------------------------------|   |                  |register_date         DATE         |     |
+--                                                |                  |birth_date            DATE         |     |
+--                                                |                  |address               VARCHAR(255) |     |
+--        |-----------------------------------|   |                  |zipcode               CHAR(5)      |     |
+--        |        PRODUCT                    |   |                  |city                  VARCHAR(50)  |     |
+--        |-----------------------------------|   |                  |phone_number          VARCHAR(20)  |     |
+--        |product_id            INTEGER      |   |                  |-----------------------------------|     |
+--   |--->|#product_category_id  INTEGER      |---|                                                            |
+--   |    |name                  VARCHAR(50)  |                                                                |
+--   |    |description           VARCHAR(255) |                                                                |
+--   |    |price                 DECIMAL(2,5) |                                                                |
+--   |    |available_stock       INTEGER      |                                                                |
+--   |    |-----------------------------------|                                                                |
+--   |                                                                                                         |
+--   |    |-----------------------------------|                      |-----------------------------------|     |
+--   |    |    ORDER_PRODUCT                  |                      |    PURCHASE_ORDER                 |     |
+--   |    |-----------------------------------|                      |-----------------------------------|     |
+--   |    |#order_id             INTEGER      |--------------------->|order_id                   INTEGER |     |
+--   |----|#product_id           INTEGER      |                      |#customer_id               INTEGER |-----|
+--        |-----------------------------------|                      |date                       DATE    |
+--                                                                   |-----------------------------------|
+
+-- Q1 : Modifier la requete pour donner la liste des villes(city) des clients (customer).
+--      la liste ne doit pas contenir de doublon et doit etre triée par ordre alphabétique.
+--
+-- ==> Rep1:
+           SELECT DISTINCT CITY
+            FROM CUSTOMER ORDER BY CITY ASC;
+
+-- Q2:  Modifier la requete ci-contre pour lister le nombre de produits(product) disponibles
+--      par categorie de produits(product_category).
+--      On ne listera pas catégories de produits ne contenant pas de produit
+--      N'afficher que les colonnes CATEGORY_NAME(product_category.name) et PRODUCT_COUNT dans cet ordre.
+--
+-- ==> Rep2:
+            SELECT COUNT(*) AS PRODUCT_COUNT, C.name AS CATEGORY_NAME
+             FROM PRODUCT P
+             INNER JOIN CATEGORY_NAME C ON P.product_category_id = C.product_category_id
+             GROUP BY P.product_category_id
+             HAVING COUNT(*) > 0
+
+-- Q3:  Modifier la requete pour sélectionner uniquement les noms et prénoms des clients
+--    (customer) dont le nom commence par la lettre "W", triés par ordre alphabetique de noms
+--    puis de prénoms.
+--
+-- ==> Rep3:
+            SELECT FIRTNAME, LASTNAME
+             FROM CUSTOMER
+             WHERE LASTNAME LIKE 'W%'
+             ORDER BY FIRTNAME ASC, LASTNAME ASC
+
+-- Q4: Modify the query to select only the customers with no associated purchase orders.
+--
+-- ==> Rep4:
+            SELECT * FROM CUSTOMER
+             WHERE customer_id NOT IN (SELECT customer_id FROM PURCHASE_ORDER)
+
+-- Q5:  Parmi les proposition suivantes concernant les clés étrangères,
+--     choisissez celles qui vous paraissent vrai:
+--
+-- ==> Rep5:
+--         -> Un clé étrangère est utilisée lorsqu'il y a une ralation 1-n entre deux tables.
+--         -> Une clé étrangère garanti l'intégrité référentielle entre deux tables.
+--         -> La valeur d'une clé étrangère peut etre NULL.
+--
+--      Choix:
+--         -> La colonne associée à une clé étrangère ne peut etre que d'un type numérique.
+--         -> Un clé étrangère est utilisée lorsqu'il y a une ralation 1-n entre deux tables.
+--         -> Une clé étrangère garanti l'intégrité référentielle entre deux tables.
+--         -> La valeur d'une clé étrangère peut etre NULL.
+--         -> Un index est systématiquement associé à une clé étrangère.
+
+-- Q6:  D'après le schéma de base de données ci-dessous, indiquer ce qui qualifie
+--     le mieux la colonne "customer_id" de la table PURCHASE_ORDER
+--
+-- ==> Rep6:  Clé étrangère
+--
+--      Choix:
+--         -> Clé primaire
+--         -> index
+--         -> Blob
+--         -> Clé étrangère
+
+--  Q7: Indiquer quelles propositions sont vraies pour une colonne déclarée en tant que clé
+--     primaire.
+--
+-- ==> Rep7:     -> Elle ne peut pas etre en plus une clé étrangère.
+--               -> Elle ne peut pas contenir des doublons
+--               -> Elle peut etre déclarée avec un type "caractère" tel que "VARCHAR"
+--
+--     Choix:
+--       -> Elle ne peut pas etre en plus une clé étrangère.
+--       -> Elle peut contenir la valeur NULL.
+--       -> Elle ne peut pas contenir des doublons
+--       -> Elle peut etre déclarée avec un type "caractère" tel que "VARCHAR"
+
+-- Q8:  Dans le schema ci-dessus, quelle serait une bonne stratégie pour améliorer
+--     les performances des requetes se basant sur la colonne "name" de la table
+--     PRODUCT_CATEGORY
+--
+-- ==> Rep8:    -> Créer un index sur la colonne "name"
+--              -> Déclarer que la colonne "name" ne peut pas contenir de doublons (unique constraint)
+--
+--      Choix:
+--         -> Etendre la clé primaire pour inclure la colonne "name" en plus de la colonne
+--             "product_category_id"
+--         -> Créer une clé étrangère sur la colonne "name"
+--         -> Créer un index sur la colonne "name"
+--         -> Déclarer que la colonne "name" ne peut pas contenir de doublons
+--         -> Changer la clé primaire de "product_category_id" vers "name"
+
+-- Q9: Dans le schema de base de données ci-dessus, en partant de la table ORDER_PRODUCT,
+--    Quelles sont les affirmations qui vous semblent vrai?
+--
+-- ==> Rep9:   -> Cette table permet une relation n-n entre PURCHASE_ORDER et PRODUCT.
+--             -> Cette table est une table de liaison/association/jointure
+--
+--      Choix:
+--         -> Cette table permet une relation n-n entre PURCHASE_ORDER et PRODUCT.
+--         -> Cette table est une table de liaison/association/jointure
+--         -> Cette table ne devrait contenir qu'un seul enregistrement pour une valeur de
+--            "order_id" donnée
+--         -> Cette table peut contenir plusieurs "order_id" différents pour une valeur de
+--            "product_id" donnée
+

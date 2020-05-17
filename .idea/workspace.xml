@@ -2,12 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3998bf29-bfff-4498-971d-f1acacae0ac0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/AsciiArt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CalculatorBigDecimal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ComputeJoinPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MIMETypeSolution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SmallInterval.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SolutionAngularTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SolutionGITTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SolutionJavaCodingProblem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SolutionJavaQA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SolutionSQL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SolutionSpringTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TestCard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClosetToZero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClosetToZero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FormDuels.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FormDuels.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LocateUniverseFormula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LocateUniverseFormula.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Questions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Questions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StringUtils.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +49,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -53,16 +63,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.FormDuels">
-    <configuration name="ClosetToZero" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ClosetToZero" />
+  <component name="RunManager" selected="Application.ComputeJoinPoint">
+    <configuration name="AsciiArt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AsciiArt" />
       <module name="CodingGame" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FormDuels" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FormDuels" />
+    <configuration name="CalculatorBigDecimal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CalculatorBigDecimal" />
+      <module name="CodingGame" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ComputeJoinPoint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ComputeJoinPoint" />
       <module name="CodingGame" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -75,15 +92,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Questions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Questions" />
-      <module name="CodingGame" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StringUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="StringUtils" />
+    <configuration name="SmallInterval" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SmallInterval" />
       <module name="CodingGame" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -91,11 +101,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FormDuels" />
+        <item itemvalue="Application.ComputeJoinPoint" />
+        <item itemvalue="Application.SmallInterval" />
+        <item itemvalue="Application.AsciiArt" />
+        <item itemvalue="Application.CalculatorBigDecimal" />
         <item itemvalue="Application.LocateUniverseFormula" />
-        <item itemvalue="Application.StringUtils" />
-        <item itemvalue="Application.ClosetToZero" />
-        <item itemvalue="Application.Questions" />
       </list>
     </recent_temporary>
   </component>
@@ -109,7 +119,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585956560103</updated>
-      <workItem from="1585956563467" duration="16897000" />
+      <workItem from="1585956563467" duration="21481000" />
+      <workItem from="1587044704178" duration="6695000" />
+      <workItem from="1589335313793" duration="613000" />
+      <workItem from="1589402332289" duration="82000" />
+      <workItem from="1589403046717" duration="629000" />
+      <workItem from="1589713100536" duration="3549000" />
     </task>
     <servers />
   </component>
@@ -121,7 +136,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
