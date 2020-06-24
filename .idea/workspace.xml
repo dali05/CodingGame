@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3998bf29-bfff-4498-971d-f1acacae0ac0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/AsciiArt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CalculatorBigDecimal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ComputeJoinPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MIMETypeSolution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SmallInterval.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SolutionAngularTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SolutionGITTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SolutionJavaCodingProblem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SolutionJavaQA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SolutionSQL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SolutionSpringTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TestCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Change.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OptimalChange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Twin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/leak/Stack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/leak/Tester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LocateUniverseFormula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LocateUniverseFormula.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +40,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spring-cloud/billing-service" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -63,21 +54,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ComputeJoinPoint">
-    <configuration name="AsciiArt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="AsciiArt" />
-      <module name="CodingGame" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalculatorBigDecimal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CalculatorBigDecimal" />
-      <module name="CodingGame" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Tester">
     <configuration name="ComputeJoinPoint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ComputeJoinPoint" />
       <module name="CodingGame" />
@@ -85,8 +62,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LocateUniverseFormula" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="LocateUniverseFormula" />
+    <configuration name="OptimalChange" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="OptimalChange" />
       <module name="CodingGame" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -99,13 +76,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leak.Tester" />
+      <module name="CodingGame" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="leak.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Twin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Twin" />
+      <module name="CodingGame" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Tester" />
+        <item itemvalue="Application.OptimalChange" />
+        <item itemvalue="Application.Twin" />
         <item itemvalue="Application.ComputeJoinPoint" />
         <item itemvalue="Application.SmallInterval" />
-        <item itemvalue="Application.AsciiArt" />
-        <item itemvalue="Application.CalculatorBigDecimal" />
-        <item itemvalue="Application.LocateUniverseFormula" />
       </list>
     </recent_temporary>
   </component>
@@ -124,7 +121,11 @@
       <workItem from="1589335313793" duration="613000" />
       <workItem from="1589402332289" duration="82000" />
       <workItem from="1589403046717" duration="629000" />
-      <workItem from="1589713100536" duration="3549000" />
+      <workItem from="1589713100536" duration="3852000" />
+      <workItem from="1590100570689" duration="6000" />
+      <workItem from="1590767823406" duration="5500000" />
+      <workItem from="1590785841970" duration="886000" />
+      <workItem from="1591405674338" duration="39000" />
     </task>
     <servers />
   </component>
